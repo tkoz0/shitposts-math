@@ -1,0 +1,42 @@
+\documentclass{article}[12pt]
+
+\usepackage{parskip}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+\begin{document}
+
+\section{Computing $4 \times 6$}
+
+Is it 46? 64? 4444? 666666?
+
+There are several ways to define multiplication. In the following sections, we
+will explore them and analyze the results. It will be helpful to note that for
+an integer $a>0$, the number of digits it has is $1+\lfloor\log_{10}(a)\rfloor$.
+
+\subsection{Method 1}
+
+Let $a>0$ and $b>0$ be integers. Then define concatenation multiplication as:
+$$ a \times b = 10^{1 + \lfloor \log_{10}(b) \rfloor} \times a + b $$
+
+Then $4 \times 6 = 46$. Note that by the commutative property of multiplication,
+$4 \times 6 = 6 \times 4$. Using the multiplication we defined, $6 \times 4 =
+64$. Then by the transitive property of equality, $46 = 64$ so we can conclude
+that math is broken.
+
+\subsection{Method 2}
+
+Let $a>0$ and $b>0$ be integers. Define repeated digit multiplication as:
+$$ a \times b = \sum_{i=0}^{a-1} b \times 10^{i\times(1+\lfloor\log_{10}(b)\rfloor)} $$
+
+Similarly we compute $4 \times 6 = 6666$. And my using the commutative property
+of multiplication, we get $6 \times 4 = 444444$. Finally, we use the transitive
+property of equality like before and get $6666=444444$. Math is also broken.
+
+\subsection{Conclusion}
+
+There is no correct way to define multiplication of 2 integers because they all
+break math.
+
+\end{document}
